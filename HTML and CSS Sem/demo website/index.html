@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <title>Clothing -best website for dress</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </head>
+<body>
+    <!-- head section -->
+    <div class="sections-container">
+      <!-- All your sections go here -->
+  
+  
+    <section class="nav-bar" id="home-section">
+      <div class="nav">
+        <img src="images/dark-logo.png" class="brand-logo" alt="">
+        <div class="nav-items">
+            <div class="search">
+                <input type="text" class="search-box" placeholder="search brand, product">
+                <button class="search-btn">search</button>
+            </div>
+            <a href="#"><img src="images/user.png" alt=""></a>
+            <a href="cart.html"><img src="images/cart.png" alt=""></a>
+        </div>
+    </div>
+    <ul class="links-container">
+        <li class="link-item"><a href="#home" class="link">home</a></li>
+        <li class="link-item"><a href="#collection" class="link">women</a></li>
+        <li class="link-item"><a href="#collection" class="link">men</a></li>
+        <li class="link-item"><a href="#" class="link">accessories</a></li>
+        <li class="link-item"><a href="#contact" class="link">Contact us</a></li>
+    </ul>
+    </section>
+    
+  <!-- section -->
+<header class="hero-section" id="home">
+  <div class="content">
+      <img src="images/light-logo.png" class="logo" alt="">
+      <p class="sub-heading">best fashion collection of all time</p>
+  </div>
+</header>
+<section class="product">
+  <h1><span class="word">Best selling<span class="superscript">s</span> </span>
+    <span class="word">this month</span></h1>
+  <div class="scrolling-text">
+    <span class="limited-stock" >Hurry Up, Limited Stock Only</span>
+  </div>
+  
+  <div class="containers">
+    <div class="item">
+      <img src="images/card1.png" alt="Product 1">
+      <button class="buttons" id="addToCart" onclick="addToCart(1)">Add to Cart</button>
+      <button class="buttons" id="buyNow" onclick="buyNow(1)">Buy Now</button>
+    </div>
+
+    <div class="item">
+      <img src="images/card2.jpg" alt="Product 2">
+      <button class="buttons" id="addToCart" onclick="addToCart(2)">Add to Cart</button>
+      <button class="buttons" id="buyNow" onclick="buyNow(2)">Buy Now</button>
+    </div>
+
+    <div class="item">
+        <img src="images/card3.png" alt="Product 2">
+        <button class="buttons" id="addToCart" onclick="addToCart(2)">Add to Cart</button>
+        <button class="buttons" id="buyNow" onclick="buyNow(2)">Buy Now</button>
+      </div>
+
+      <div class="item">
+        <img src="images/card4.png" alt="Product 2">
+        <button class="buttons" id="addToCart" onclick="addToCart(2)">Add to Cart</button>
+        <button class="buttons" id="buyNow" onclick="buyNow(2)">Buy Now</button>
+      </div>
+
+      <div class="item">
+        <img src="images/card5.jpg" alt="Product 2">
+        <button class="buttons" id="addToCart" onclick="addToCart(2)">Add to Cart</button>
+        <button class="buttons" id="buyNow" onclick="buyNow(2)">Buy Now</button>
+      </div>
+
+      <div class="item">
+        <img src="images/card6.jpg" alt="Product 2">
+        <button class="buttons" id="addToCart" onclick="addToCart(2)">Add to Cart</button>
+        <button class="buttons" id="buyNow" onclick="buyNow(2)">Buy Now</button>
+      </div>
+
+      <div class="item">
+        <img src="images/card7.jpg" alt="Product 2">
+        <button class="buttons" id="addToCart" onclick="addToCart(2)">Add to Cart</button>
+        <button class="buttons" id="buyNow" onclick="buyNow(2)">Buy Now</button>
+      </div>
+
+
+    <!-- Repeat this pattern for the remaining items -->
+    
+  </div>
+</section>
+
+<!-- <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+<button class="nxt-btn"><img src="images/arrow.png" alt=""></button> -->
+
+<!-- collections -->
+<section class="collection-container" id="collection">
+  <a href="women.html" class="collection">
+      <img src="images/women-collection.png" alt="">
+      <p class="collection-title">women <br> apparels</p>
+  </a>
+  <a href="#" class="collection">
+      <img src="images/men-collection.png" alt="">
+      <p class="collection-title">men <br> apparels</p>
+  </a>
+  <a href="#" class="collection">
+      <img src="images/accessories-collection.png" alt="">
+      <p class="collection-title">accessories</p>
+  </a>
+</section>
+<section id="contact">
+  <div class="login-card">
+      <h2>Contact me</h2>
+      <h3>Enter your credentials</h3>
+      <form class="login-form"  action="https://formsubmit.co/guruthedev20@gmail.com" method="post">
+        <input type="text" placeholder="Name" name="Name" required />
+        <input type="email" placeholder="Enter your email address" name="Email" required/>
+        <textarea name="Message" id="textarea" cols="30" rows="10" style="resize: none;" required></textarea>
+        <button id="but">
+          <span>Send</span>
+        </button>
+      </form>
+    </div>
+</section>
+
+<footer class="footer" style="background-color: blanchedalmond;">
+  <div class="footer-content">
+      <div class="footer-logo">
+          <img src="images/dark-logo.png" alt="Footer Logo">
+      </div>
+      <div class="footer-links">
+          <ul>
+              <li><a href="https://wa.me/qr/5BKFCYAVQ4KLL1"><img src="images/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt=""></a></li>
+              <li><a href="https://instagram.com/bad_side_of_beast?igshid=OGs0dDd6N2F5eGM4"><img src="images/instagram (2).png" alt=""></a></li>
+              <li><a href="https://pin.it/6p9Fjb3"><img src="images/pinterest.png" alt=""></a></li>
+              <li><a href="https://www.linkedin.com/in/guru-nath-85129a217/"><img src="images/linkedin.png" alt=""></a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+
+</div>
+  <script src="js/home.js"></script>
+  <script>
+      // JavaScript functions for handling cart and buy now actions (same as before)
+    let cart = [];
+
+function addToCart(productId) {
+  cart.push(productId);
+  alert("Item added to cart!");
+  // Store the cart data in localStorage to pass it to the cart page
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function buyNow(productId) {
+  let product = "Product " + productId;
+  // Collect information here, e.g., name, address, etc. (same as before)
+  let name = prompt("Enter your name:");
+  let address = prompt("Enter your address:");
+
+  // Display a thank you message (same as before)
+  let message = `Thank you for purchasing ${product}!\n\n`;
+  message += `Name: ${name}\nAddress: ${address}`;
+  alert(message);
+}
+// for contact
+function addClass() {
+  document.body.classList.add("sent");
+}
+
+sendLetter.addEventListener("click", addClass);
+</script>
+</body>
+</html>

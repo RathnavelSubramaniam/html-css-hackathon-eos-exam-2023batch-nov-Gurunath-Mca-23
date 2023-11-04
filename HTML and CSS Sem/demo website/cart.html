@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS for the cart page */
+        .cart-container {
+          text-align: center;
+        }
+    
+        /* Style the cart items */
+        .cart-item {
+          display: inline-block;
+          margin: 10px;
+        }
+      </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div class="cart-items">
+          <!-- Cart items will be displayed here -->
+        </div>
+      </div>
+      <script>
+        // Retrieve the cart data from localStorage
+        const cartData = JSON.parse(localStorage.getItem('cart'));
+    
+        // Display the items in the cart
+        if (cartData && cartData.length > 0) {
+          const cartItemsContainer = document.querySelector('.cart-items');
+          cartData.forEach((productId) => {
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            cartItem.textContent = `Product ${productId}`;
+            cartItemsContainer.appendChild(cartItem);
+          });
+        }
+      </script>
+</body>
+</html>

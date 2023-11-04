@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .button {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button:hover,
+.button:active {
+  background-color: white;
+  
+  color: #FF4742;
+}
+
+.button:active {
+  opacity: .5;
+}
+    </style>
+</head>
+<body>
+    <main>
+    <nav>
+        <div class="anchor1">
+           <ul>
+           <li><a href="#home">Home</a></li> 
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#snacks">Snacks</a></li>
+           </ul>
+        </div>
+    </nav>
+    <section id="home" >
+        <h1 style="font-family: 'Times New Roman', Times, serif;font-size:200px;">Welcome to Our Cinema</h1>
+    <p>Experience the magic of cinema with the latest blockbuster movies in stunning high-definition.</p>
+    <p>Book your tickets online and enjoy a comfortable and m22emorable movie-going experience.</p>
+    <h2 id="maint1">Now Playing</h2>
+    </section>
+    <section id="movies"  style="background-color:#662549;">
+        <div class="movie" id="leo">
+            <img src="leo2.jpg" alt="Leo" style="height: 200px; width: 200px;">
+            <h2>Leo</h2>
+            <p>Price: ₹300</p>
+            <button class="button" onclick="bookTicket('Leo', 300)">Book Ticket</button>
+        </div>
+        <div class="movie" id="deadpool3">
+            <img src="DEADPOOL-3-POSTER-min.jpg" alt="Deadpool" style="height: 200px; width: 200px;">
+            <h2>Deadpool 3</h2>
+            <p>Price: ₹245</p>
+            <button onclick="bookTicket('Deadpool 3', 245)" class="button">Book Ticket</button>
+        </div>
+        <div class="movie" id="spiderman3">
+            <img src="dfxmhe9-17218f94-d379-484e-a2f4-f05e8d6d00c5.jpg" alt="Spider-Man" style="height: 200px; width: 200px;">
+            <h2>Spider-Man 3</h2>
+            <p>Price: ₹285</p>
+            <button class="button" onclick="bookTicket('Spider-Man 3', 285)">Book Ticket</button>
+        </div>
+        <div class="movie" id="animal">
+            <img src="Animal-01-322x437.jpg" alt="Animal" style="height: 200px; width: 200px;">
+            <h2>Animal</h2>
+            <p>Price: ₹185</p>
+            <button class="button" onclick="bookTicket('Animal', 185)">Book Ticket</button>
+        </div>
+        <h2 id="maint2">Upcoming Releases</h2>
+        <div class="movie" id="leo">
+            <img src="leo2.jpg" alt="Leo" style="height: 200px; width: 200px;">
+            <h2>Leo</h2>
+            <p>Price: ₹300</p>
+            <button class="button" onclick="bookTicket('Leo', 300)">Book Ticket</button>
+        </div>
+        <div class="movie" id="deadpool3">
+            <img src="DEADPOOL-3-POSTER-min.jpg" alt="Deadpool" style="height: 200px; width: 200px;">
+            <h2>Deadpool 3</h2>
+            <p>Price: ₹245</p>
+            <button onclick="bookTicket('Deadpool 3', 245)" class="button">Book Ticket</button>
+        </div>
+        <div class="movie" id="spiderman3">
+            <img src="dfxmhe9-17218f94-d379-484e-a2f4-f05e8d6d00c5.jpg" alt="Spider-Man" style="height: 200px; width: 200px;">
+            <h2>Spider-Man 3</h2>
+            <p>Price: ₹285</p>
+            <button class="button" onclick="bookTicket('Spider-Man 3', 285)">Book Ticket</button>
+        </div>
+        <div class="movie" id="animal">
+            <img src="Animal-01-322x437.jpg" alt="Animal" style="height: 200px; width: 200px;">
+            <h2>Animal</h2>
+            <p>Price: ₹185</p>
+            <button class="button" onclick="bookTicket('Animal', 185)">Book Ticket</button>
+        </div>
+        
+    </section>
+
+    <section id="snacks"  style="background-color:#AE445A;">
+        <!-- <section id="snacks" style="background-color: #AE445A;">
+            <h2>Snacks and Refreshments</h2>
+            <p>Enhance your movie-watching experience with our delicious snacks and refreshments. We offer a variety of options to satisfy your cravings while enjoying your favorite films.</p>
+        
+            <h3>Menu</h3>
+            <ul>
+                <li>Popcorn - ₹5</li>
+                <li>Soft Drinks - ₹3</li>
+                <li>Candies - ₹2</li>
+                <li>Ice Cream - ₹4</li>
+                <li>Hot Dogs - ₹6</li>
+            </ul>
+        
+            <p>Don't forget to grab some snacks and refreshments to complete your cinema experience. Enjoy your movie with a tasty treat!</p>
+        </section> -->
+        
+    </section>
+
+    <section id="cart"  style="background-color:#F39F5A;">
+        <h2>Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total Amount: ₹<span id="totalAmount">0</span></p>
+    </section>
+</main>
+    <script>
+
+      
+        const selectedTickets = {};
+        let totalAmount = 0;
+        let movieName;
+       
+        function bookTicket(movieName, price) {
+            
+            if (selectedTickets[movieName]) {
+                selectedTickets[movieName]++;
+            } else {
+                selectedTickets[movieName] = 1;
+            }
+
+           
+            updateCart();
+
+           
+            totalAmount += price;
+            document.getElementById('').textContent = totalAmount;
+            document.getElementById('totalAmount').textContent = totalAmount;
+        }
+
+        
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = '';
+
+            for (const [movieName, quantity] of Object.entries(selectedTickets)) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${movieName} x${quantity}`;
+                cartItems.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

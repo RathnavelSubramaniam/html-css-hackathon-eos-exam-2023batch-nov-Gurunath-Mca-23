@@ -1,0 +1,157 @@
+@import 'nav.css';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    z-index: 9;
+    position: fixed;
+}
+
+.nav{
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.brand-logo{
+    height: 60px;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 500px;
+    display: flex;
+}
+
+.search-box{
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #d1d1d1;
+    text-transform: capitalize;
+    background: none;
+    color: #a9a9a9;
+    outline: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn{
+    width: 20%;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #383838;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-box::placeholder{
+    color: #a9a9a9;
+}
+
+.nav-items a{
+    margin-left: 20px;
+}
+
+.nav-items a img{
+    width: 30px;
+}
+/* code for nav bar links */
+.links-container{
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid #d1d1d1;
+}
+/* CSS for navigation link animation on hover with border-bottom */
+.link{
+    text-transform: capitalize;
+    padding: 0 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #383838;
+    opacity: 0.5;
+    transition: .5s;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid transparent; /* Start with a transparent border */
+    position: relative;
+    display: inline-block;
+}
+  
+.link::before,
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background: #007BFF; /* Border color */
+  transition: width 0.3s;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.link::before {
+  left: 0;
+}
+
+.link::after {
+  right: 0;
+}
+
+.link:hover {
+  color: #007BFF; /* Text color change on hover */
+}
+
+.link:hover::before,
+.link:hover::after {
+  width: 50%; /* Border appears slowly from center to both ends */
+  transform: scaleX(1);
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Add your desired background color */
+    z-index: 100; /* Set a z-index value to ensure it's above other content */
+    /* Add any other styles you want for the fixed navigation bar */
+}
+/* Mobile responsiveness for the navigation links */
+@media screen and (max-width: 600px) {
+    .links-container {
+        flex-wrap: wrap;
+    }
+
+    .link {
+        margin: 5px;
+        padding: 0 5px;
+    }
+}

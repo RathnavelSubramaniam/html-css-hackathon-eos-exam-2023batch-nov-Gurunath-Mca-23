@@ -1,0 +1,88 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'YourEmbeddedFont', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure a minimum height of the viewport */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(to bottom, #FF5733, #FF1E00);
+    color: white;
+    padding: 10px 0;
+}
+
+header ul {
+    list-style: none;
+    text-align: right;
+}
+
+header li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Container styles */
+.container {
+    flex: 1; /* Grow to fill available vertical space */
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    flex: 0 0 20%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Main content styles */
+main {
+    flex: 0 0 70%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(to top, #FF5733, #FF1E00);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Copyright symbol entity */
+.footer-copyright::before {
+    content: '\00A9';
+}
+
+/* Responsive styles for small screens (adjust as needed) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, main {
+        flex: 0 0 100%;
+    }
+}

@@ -1,0 +1,187 @@
+   /* #cart{
+    display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position:absolute;
+      left: 45%}
+    */
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #111;
+      }
+
+
+      .active {
+        background-color: #04AA6D;
+      }
+   
+      /* zzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+       */
+       /* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Style the home section */
+#home {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#home ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#home li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+#maint1{
+ 
+}
+
+#maint2{
+    
+}
+/* Style the movies section */
+#movies {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.movie {
+    margin: 20px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.movie img {
+    max-width: 100%;
+    height: auto;
+}
+
+.movie h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.movie p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.movie button {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.movie button:hover {
+    background-color: #0056b3;
+}
+
+/* Style the cart section */
+#cart {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#cart h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cartItems li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+#totalAmount {
+    font-size: 18px;
+    color: #0074D9;
+    font-weight: bold;
+}

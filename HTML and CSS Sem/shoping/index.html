@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Farm Producer website</title>
+    <link rel="stylesheet" href="style.css"> <!-- Replace "com.css" with your own CSS file -->
+    <style>
+       
+
+
+
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: white;
+  
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to Online Fresh Farm</h1> <hr>
+    <h1>Vegetables</h1><hr>
+    <main>   
+        <section class="product">
+            <img src="./tommato.jpg"alt="book" style="height: 200px;width: 200px;">
+                <h2>Tomato</h2>
+                <p>Price = Rs.100</p>
+                <button onclick="veg('Tomato',100)"  class="button-24"  role="button">Buy</button><br>  
+                
+        
+        </section>
+        <section class="product">
+            <img src="./bitter gourds.jpg"alt="book" style="height: 200px;width: 200px;">
+                <h2>Bitter Gourd</h2>
+                <p>Price = Rs.85</p>
+                <button onclick="veg('Bitter Gourd',85)" class="button-24"  role="button">Buy</button><br>
+        </section>
+        <section class="product">
+                <img src="./onian.jpg"alt="book" style="height: 200px;width: 200px;">
+                <h2>Onion</h2>
+                <p>Price = Rs.60</p>
+                <button onclick="veg('Onion',60)" class="button-24"  role="button">Buy</button><br>
+            </section>
+            <section class="product">
+                <img src="./pumpkin.jpg"alt="book" style="height: 200px;width: 200px;">
+                 <h2>Pumpkin</h2>
+                <p>Price = Rs.50</p>
+                <button onclick="veg('Pumpkin',50)" class="button-24"  role="button">Buy</button><br>
+            </section>
+            <section class="product">
+                <img src="./carrot.jpg"alt="book" style="height: 200px; width: 200px;">
+                <h2>carrot</h2>
+                <p>Price = Rs.100</p>
+                <button onclick="veg('carrot',100)" class="button-24"  role="button">Buy</button><br> 
+            </section>
+            <section class="product">
+                <img src="./cabbage.jpg"alt="book" style="height: 200px; width: 200px;">
+                <h2>Cabbage</h2>
+                <p>Price = Rs.70</p>
+                <button onclick="veg('cabbage',70)" class="button-24"  role="button">Buy</button><br> 
+            </section>
+        </main>
+        <h1>Fruits</h1><hr>
+        <main>
+            <section class="product">
+                <img src="./apple.jpg"alt="book" style="height: 200px;width: 200px;">
+                    <h2>Apple</h2>
+                    <p>Price = Rs.150</p>
+                    <button onclick="fruit('Apple',150)" class="button-24"  role="button">Buy</button><br>      
+            
+            </section>
+            <section class="product">
+                <img src="./banana.jpg"alt="book" style="height: 200px;width: 200px;">
+                    <h2>Banana</h2>
+                    <p>Price = Rs.10</p>
+                    <button onclick="fruit('banana',10)" class="button-24"  role="button">Buy</button><br>
+            </section>
+            <section class="product">
+                    <img src="./strawberry.jpg"alt="book" style="height: 200px;width: 200px;">
+                    <h2>Strawberry</h2>
+                    <p>Price = Rs.1000</p>
+                    <button onclick="fruit('strawberry',1000)" class="button-24"  role="button">Buy</button><br>
+                </section>
+                <section class="product">
+                    <img src="./mango.jpg"alt="book" style="height: 200px;width: 200px;">
+                     <h2>Mango</h2>
+                    <p>Price = Rs.200</p>
+                    <button onclick="fruit('mango',200)" class="button-24"  role="button">Buy</button><br>
+                </section>
+                <section class="product">
+                    <img src="./papaya.jpg"alt="book" style="height: 200px; width: 200px;">
+                    <h2>Papaya</h2>
+                    <p>Price = Rs.90</p>
+                    <button onclick="fruit('papaya',90)" class="button-24"  role="button">Buy</button><br> 
+                </section>
+                <section class="product">
+                    <img src="./watermel.jpg"alt="book" style="height: 200px; width: 200px;">
+                    <h2>WaterMelan</h2>
+                    <p>Price = Rs.50</p>
+                    <button onclick="fruit('WaterMelan',50)" class="button-24"  role="button">Buy</button><br> 
+                </section>
+        </main>
+  
+       <a href="cart.html" id="cartbutton" class="cartbutton">Show Cart</a>
+        
+    
+        <script>
+            var fruittotal=0
+            var vegtotal=0
+        function addToCart(product, price, category) {
+            var cartTextArea;        
+            if (category === 'vegetables') {
+                cartTextArea = document.getElementById('my');
+                vegtotal=price+vegtotal
+                document.getElementById("vegetables").value=vegtotal
+            } else if (category === 'fruits') {
+                cartTextArea = document.getElementById('shop');
+                fruittotal=price+fruittotal
+                document.getElementById("fruits").value=fruittotal
+            }3
+            
+            cartTextArea.value += product + " - Rs." + price + "\n";
+        }
+    
+        function veg(product, price) {
+            addToCart(product, price, 'vegetables');
+        }
+    
+        function fruit(product, price) {
+            addToCart(product, price, 'fruits');
+        }
+    </script>
+
+<!--      -->
+</body>
+</html>
